@@ -234,8 +234,11 @@ java中`hashmap`是由一个数组来实现的，不同的key，通过hash算法
                     e.hash = null == e.key ? 0 : hash(e.key);
                 }
                 int i = indexFor(e.hash, newCapacity);
+                // 链表顺序发生了反转
                 e.next = newTable[i];
                 newTable[i] = e;
+                //  e = next 的目的是刷新e的值，直到循环终止
+                // e = next 并不参与整个赋值的过程
                 e = next;
             }
         }

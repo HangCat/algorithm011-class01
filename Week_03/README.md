@@ -52,3 +52,5 @@ void recurision (int level, int maxLevel) {
    ​															  ->  回溯	
 
    回溯，通常都会由一个**backtrack**的操作
+   
+   排列组合相关的问题，都可以考虑回溯法
